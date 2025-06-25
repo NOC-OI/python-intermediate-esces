@@ -274,13 +274,6 @@ What about plotting after joining DataFrames? Let's plot the water depths at eac
 # water depth in the buoys dataframe is currently a string (it's suffixed by "m") so we need to fix that
 def fix_depth_string(i, depth):
     if type(depth) == str:
-        buoys_df["Depth"][i] = float((buoys_df["Depth"][i]).strip().rstrip("m"))
-
-for i, depth in enumerate(buoys_df["Depth"]):
-    fix_depth_string(i, depth)
-
-def fix_depth_string(i, depth):
-    if type(depth) == str:
         buoys_df.loc[i, "Depth"] = float(depth.strip().rstrip("m"))
 
 for i, depth in enumerate(buoys_df["Depth"]):
