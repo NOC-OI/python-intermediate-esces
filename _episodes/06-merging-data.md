@@ -351,7 +351,7 @@ The pandas `merge` function supports two other join types:
 >> ~~~
 >> # read the files
 >> waves_df = pd.read_csv("data/waves.csv")
->> waves2020_df = pd.read_csv("data/waves_2020.csv")
+>> buoys_df = pd.read_csv("data/buoy_data.csv")
 >> # Merging the data frames
 >> merged_left = pd.merge(left=waves_df,right=buoys_df, how='left', on="buoy_id")
 >> # Group by Site Type, and calculate mean of Wave Height
