@@ -37,14 +37,6 @@ buoys_df = pd.read_csv("data/buoy_data.csv",
 ~~~
 {: .language-python}
 
-Take note that the `read_csv` method we used can take some additional options which
-we didn't use previously. Many functions in Python have a set of options that
-can be set by the user if needed. In this case, we have told pandas to assign
-empty values in our CSV to NaN `keep_default_na=False, na_values=[""]`.
-We have explicitly requested to change empty values in the CSV to NaN,
-this is however also the default behaviour of `read_csv`.
-[More about all of the `read_csv` options here and their defaults.](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas.read_csv)
-
 # Concatenating DataFrames
 
 We can use the `concat` function in pandas to append either columns or rows from

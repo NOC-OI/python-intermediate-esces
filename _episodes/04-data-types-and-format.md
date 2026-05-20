@@ -650,6 +650,24 @@ The answer to the previous challenge shows there's often more than one way to us
 can call `.isnull()` on a DataFrame, or pass a DataFrame to it as an argument. In most cases, you will need to read the
 documentation to find out how to use functions.
 
+### Handling NaNs when loading data
+
+When loading data into Pandas we can specify what to do with unknown values. The `read_csv` function has two optional 
+parameters which can help with this: `keep_default_na` and `na_values`. `na_values` specifies which values should
+be converted to NaNs and `keep_default_na` specifies what to do with the default NaN values (e.g. the text "NaN"). 
+
+~~~
+waves_df = pd.read_csv("data/waves.csv",
+                         keep_default_na=False, na_values=[""])
+~~~
+{: .language-python}
+
+In this case, we have told pandas to assign
+empty values in our CSV to NaN `keep_default_na=False, na_values=[""]`.
+We have explicitly requested to change empty values in the CSV to NaN,
+this is however also the default behaviour of `read_csv`.
+[More about all of the `read_csv` options here and their defaults.](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.read_csv.html#pandas.read_csv)
+
 ## Writing Out Data to CSV
 
 We've learned about using manipulating data to get desired outputs. But we've also discussed
