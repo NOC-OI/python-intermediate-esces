@@ -182,7 +182,7 @@ For a brief introduction to Jupyter Notebooks, please consult our
 
 
 
-> ## Data
+> ## Data Download
 > We will be using some ocean wave data and some geospatial datasets for this lesson; please download:
 > - [data.zip]({{ page.root }}/data/data.zip)
 >
