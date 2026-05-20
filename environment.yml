@@ -1,4 +1,4 @@
-name: python-ecology-lesson
+name: intermediate-python-workshop
 channels:
   - conda-forge
   - defaults

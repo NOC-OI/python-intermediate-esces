@@ -18,8 +18,7 @@ Users of the NOC Data Science Platform or Binder Hub can skip this section and m
 {: .prereq}
 
 
-## Installing Anaconda
-### Install Miniforge
+### Installing Miniforge
 
 If Conda has not been installed on your machine, then install [Miniforge](https://conda-forge.org/download/) for your OS. As the name
 suggests, Miniforge is a "mini" version of the
@@ -70,7 +69,7 @@ rm Miniforge3-$(uname)-$(uname -m).sh
 In order to verify that you have installed Conda correctly run the `conda help` command. Output
 of the command should look similar to the following.
 
-```bash
+~~~
 $ conda help
 usage: conda [-h] [-V] command ...
 
@@ -144,7 +143,7 @@ This will then install the latest version of plotnine into your conda environmen
 
 ### _(Alternative)_ Installing required packages with environment file
 Download the 
-[environment.yml](https://raw.githubusercontent.com/datacarpentry/python-ecology-lesson/gh-pages/environment.yml) 
+[environment.yml]({{ page.root }}/environment.yml) 
 file by right-clicking the link and selecting save as.
 In the directory where you downloaded the environment.yml file run:
 
@@ -155,7 +154,7 @@ conda env create -f environment.yml
 
 Activate the new environment with:
 ~~~
-conda activate python-ecology-lesson
+conda activate intermediate-python-workshop
 ~~~
 {: .language-bash}
 
