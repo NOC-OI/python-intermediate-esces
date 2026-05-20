@@ -71,17 +71,13 @@ portal][anaconda-community].
 We know we have already said that but it is worth repeating.
 
 <br />
-## Knowing your way around Anaconda
-[Anaconda][anaconda] distribution of Python includes a lot of its popular packages,
-such as the IPython console, Jupyter Notebook, and Spyder IDE.
-Have a quick look around the Anaconda Navigator. You can launch programs from the Navigator or use the command line.
-
+## Knowing your way around
 The [Jupyter Notebook](https://jupyter.org) is an open-source web application that allows you to create
 and share documents that allow one to create documents that combine code, graphs, and narrative text.
 [Spyder][spyder-ide] is an **Integrated Development Environment** that
 allows one to write Python scripts and interact with the Python software from within a single interface.
 
-Anaconda also comes with a package manager called [conda](https://conda.io/docs/),
+Many Python installations comes with a package manager called [conda](https://conda.io/docs/),
 which makes it easy to install and update additional packages.
 
 <br />
