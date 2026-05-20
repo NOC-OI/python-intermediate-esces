@@ -381,6 +381,12 @@ dates.apply(datetime.datetime.strftime, args=("%a",))
 > The `args` argument of `apply` expects a tuple, so if there's only one argument to give we need to use the trailing comma. 
 {: .callout}
 
+> # Accessing just one element from a Pandas DataFrame
+> We can access a single element of a Pandas DataFrame by using `<dataframe name>.iloc[<offset>]` where <dataframe name> is the DataFrame we want to access
+> and <offset> is the number of the element in the DataFrame. As with Python lists this number starts from zero not one, so the first element is accessed with
+> `<dataframe name>.iloc[0]` and the second element with `<dataframe name>.iloc[1]`. 
+> {: .callout}
+
 We can also find the time differences between two dates - Pandas (and Python) refer to these as _Time Deltas_. We can take the difference between two timestamps, and Python will
 automatically create a TimeDelta for us:
 
