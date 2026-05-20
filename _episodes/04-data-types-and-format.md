@@ -248,7 +248,7 @@ float(b)
 ## Working with dates
 
 You've probably noticed that one of the columns in our `waves_df` DataFrame represents the time at which the measurement was taken. As with all other non-numeric types, Pandas automatically set the type of
-this column as `Object`. However, because we know it's a date, we can cast is a Date type. For the purposes of this section, let's create a new Pandas Series of the Date values:
+this column as `Object`. However, because we know it's a date, we can cast is a Date type. For the purposes of this section, let's extract the Date column from our DataFrame as a new Pandas Series of Date values:
 
 ~~~
 dates = waves_df["Date"]
