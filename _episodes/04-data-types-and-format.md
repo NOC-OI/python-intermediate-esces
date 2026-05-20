@@ -321,8 +321,10 @@ date1.day_of_year
 ~~~
 {: .language-python}
 
-This is a convenient place to highlight that the `apply` method is one way to run a function on every element of a Pandas data structure, without needing to write a loop. For example, to get the length of 
-the Buoy Station Names, we can write:
+This is a convenient place to highlight that the `apply` method is one way to run a function on every element of a Pandas data structure, without needing to write a loop. 
+You can find more about how to use the `apply` function and the arguments it takes in the [Pandas documentation page for it](https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.apply.html).
+
+For example, to get the length of the Buoy Station Names, we can write:
 
 ~~~
 waves_df["Name"].apply(len)
