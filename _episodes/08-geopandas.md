@@ -58,10 +58,10 @@ import geopandas as gpd
 
 > ## Conda environments
 > We're now at the stage where you might find it useful to have different python _environments_ for specific
-> tasks. When you open Anaconda Navigator, it will, by default, be running in your `base` environment.
-> However, you can create new environments via the Environments tab in the left-hand menu. Each environment
-> can have different packages (or different versions of packages), different versions of python, etc - and
-> different packages can be installed via the Environments tab. However, note that individual Notebooks are _not_
+> tasks. By default Conda will be running in your `base` environment.
+> However, you can create new environments, each environment
+> can have different packages (or different versions of packages), different versions of Python, etc - and
+> different packages can be installed. However, note that individual Notebooks are _not_
 > associated with specific environments - they are associated with the current _active_ environment. A full
 > introduction to Conda environments can be found at [https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/](https://carpentries-incubator.github.io/introduction-to-conda-for-data-scientists/)
 {: .callout}
