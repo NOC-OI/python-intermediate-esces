@@ -2,128 +2,126 @@
 title: Setup
 ---
 
-> ## Data
-> We will be using some ocean wave data and some geospatial datasets for this lesson; please download:
-> - [data.zip]({{ page.root }}/data/data.zip)
->
-> Please download and then unzip the file, and move the files to a directory called data within the 
-> directory you will run your Notebook from
-{: .prereq}
+## Install Python
 
+Users of the NOC Data Science Platform or Binder Hub can skip this section and move on to the "Data Download" section below.
 
-> ## Installing Python using Anaconda
+> ## Installing Python using Miniforge
 >
 > [Python][python] is a popular language for scientific computing, and great for
 > general-purpose programming as well. Installing all of the scientific packages we use in the lesson
-> individually can be a bit cumbersome, and therefore recommend the all-in-one
-> installer [Anaconda][anaconda].
+> individually can be a bit cumbersome, and therefore recommend using the Conda package manager
+> which comes with [Miniforge][miniforge].
 >
 > Regardless of how you choose to install it, please make sure you install Python
-> version 3.x (e.g., 3.6 is fine).
+> version 3.x (e.g., 3.12 is fine).
 {: .prereq}
 
 
 ## Installing Anaconda
+### Install Miniforge
 
-{::options parse_block_html="true" /}
-<div>
-<ul class="nav nav-tabs" role="tablist">
-  <li role="presentation" class="active"><a data-os="windows" href="#anaconda-windows" aria-controls="Windows" role="tab" data-toggle="tab">Windows</a></li>
-  <li role="presentation"><a data-os="macos" href="#anaconda-macos" aria-controls="MacOS" role="tab" data-toggle="tab">MacOS</a></li>
-  <li role="presentation"><a data-os="linux" href="#anaconda-linux" aria-controls="Linux" role="tab" data-toggle="tab">Linux</a></li>
-</ul>
+If Conda has not been installed on your machine, then install [Miniforge](https://conda-forge.org/download/) for your OS. As the name
+suggests, Miniforge is a "mini" version of the
+[Anaconda Python distribution](https://www.anaconda.com/download) that includes only Conda, a
+Python 3 distribution, and any necessary OS-specific dependencies.
 
-<div class="tab-content">
-<article role="tabpanel" class="tab-pane active" id="anaconda-windows">
+For convenience here are links to the 64-bit Miniconda installers.
 
-1.  Open <https://www.anaconda.com/products/individual> in your web browser.
-2.  Download the Anaconda Python 3 installer for Windows.
-3.  Double-click the executable and install Python 3 using the recommended settings.
-    Make sure that **Register Anaconda as my default Python 3.x** option is checked --
-    it should be in the latest version of Anaconda.
-4.  Verify the installation:
-    click Start, search and select `Anaconda Prompt` from the menu.
-    A window should pop up where you can now type commands
-    such as checking your Conda installation with:
+* [Windows](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe)
+* [Mac OSX - Intel CPU](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-x86_64.sh)
+* [Mac OSX - Apple M1/2/3 CPU](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh)
+* [Linux](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh)
 
-    ~~~
-    conda --help
-    ~~~
-    {: .language-bash}
 
-#### Video Tutorial
+#### Windows installation
 
-<div class="yt-wrapper2">
-<div class="yt-wrapper">
-<iframe type="text/html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/xxQ0mzZ8UvA?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0" class="yt-frame" allowfullscreen></iframe>
-</div>
-</div>
-</article>
+After you downloaded the [Windows installer](https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Windows-x86_64.exe), double click on it and follow the instructions (accept license, etc.).
+Make sure you tick on **"Add Miniforge3 to my PATH environment variable"** option.
 
-<article role="tabpanel" class="tab-pane" id="anaconda-macos">
+#### Mac OSX or Linux installation
 
-1.  Visit <https://www.anaconda.com/products/individual> in your web browser.
-2.  Download the Anaconda Python 3 installer for macOS.
-    These instructions assume that you use the graphical installer `.pkg` file.
-3.  Follow the Anaconda Python 3 installation instructions.
-    Make sure that the install location is set to "Install only for me"
-    so Anaconda will install its files locally, relative to your home directory.
-    Installing the software for all users tends to create problems in the long run
-    and should be avoided.
-4.  Verify the installation:
-    click the Launchpad icon in the Dock, type Terminal in the search field, then click Terminal.
-    A window should pop up where you can now type commands
-    such as checking your conda installation with:
+First, download the 64-bit Python 3 install script for Miniforge
+either by clicking the link above or using this command in your terminal:
 
-    ~~~
-    conda --help
-    ~~~
-    {: .language-bash}
+~~~
+wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+~~~
+{: .language-bash}
 
-#### Video Tutorial
+Run the Miniforge install script from your terminal. Follow the prompts on the installer screens. If you are unsure
+about any setting, accept the defaults (you can change them later if necessary).
 
-<div class="yt-wrapper2">
-<div class="yt-wrapper">
-<iframe type="text/html" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" src="https://www.youtube-nocookie.com/embed/TcSAln46u9U?modestbranding=1&playsinline=1&iv_load_policy=3&rel=0" class="yt-frame" allowfullscreen></iframe>
-</div>
-</div>
-</article>
+~~~
+bash Miniforge3-$(uname)-$(uname -m).sh
+~~~
+{: .language-bash}
 
-<article role="tabpanel" class="tab-pane" id="anaconda-linux">
-Note that the following installation steps require you to work from the terminal (shell).
-If you run into any difficulties, please request help before the workshop begins.
+Once the install script completes, you can remove it.
 
-1.  Open <https://www.anaconda.com/products/individual> in your web browser.
-2.  Download the Anaconda Python 3 installer for Linux.
-3.  Install Anaconda using all of the defaults for installation.
-    * Open a terminal window.
-    * Navigate to the folder where you downloaded the installer.
-    * Type `bash Anaconda3-` and press <kbd>Tab</kbd>.
-      The name of the file you just downloaded should appear.
-    * Press <kbd>Return</kbd>
-    * Follow the text-only prompts.  When the license agreement appears (a colon
-      will be present at the bottom of the screen) press <kbd>Spacebar</kbd> until you see the
-      bottom of the text. Type `yes` and press <kbd>Return</kbd> to approve the license. Press
-      <kbd>Return</kbd> again to approve the default location for the files. Type `yes` and
-      press <kbd>Return</kbd> to prepend Anaconda to your `PATH` (this makes the Anaconda
-      distribution your user's default Python).
-4.  Verify the installation:
-    this depends a bit on your Linux distribution, but often you will have an Applications listing
-    in which you can select a Terminal icon you can click. A window should pop up where you can now
-    type commands such as checking your conda installation with:
+~~~
+rm Miniforge3-$(uname)-$(uname -m).sh
+~~~
+{: .language-bash}
 
-    ~~~
-    conda --help
-    ~~~
-    {: .language-bash}
 
-</article>
-</div>
-</div>
+### Verifying your Conda installation
 
-[anaconda]: https://www.anaconda.com/
-[jupyter]: https://jupyter.org/
-[python]: https://www.python.org/
+In order to verify that you have installed Conda correctly run the `conda help` command. Output
+of the command should look similar to the following.
+
+```bash
+$ conda help
+usage: conda [-h] [-V] command ...
+
+conda is a tool for managing and deploying applications, environments and packages.
+
+Options:
+
+positional arguments:
+  command
+    clean        Remove unused packages and caches.
+    config       Modify configuration values in .condarc. This is modeled
+                 after the git config command. Writes to the user .condarc
+                 file (/Users/drpugh/.condarc) by default.
+    create       Create a new conda environment from a list of specified
+                 packages.
+    help         Displays a list of available conda commands and their help
+                 strings.
+    info         Display information about current conda install.
+    init         Initialize conda for shell interaction. [Experimental]
+    install      Installs a list of packages into a specified conda
+                 environment.
+    list         List linked packages in a conda environment.
+    package      Low-level conda package utility. (EXPERIMENTAL)
+    remove       Remove a list of packages from a specified conda environment.
+    uninstall    Alias for conda remove.
+    run          Run an executable in a conda environment. [Experimental]
+    search       Search for packages and display associated information. The
+                 input is a MatchSpec, a query language for conda packages.
+                 See examples below.
+    update       Updates conda packages to the latest compatible version.
+    upgrade      Alias for conda update.
+
+optional arguments:
+  -h, --help     Show this help message and exit.
+  -V, --version  Show the conda version number and exit.
+
+conda commands available from other packages:
+  env
+~~~
+{: .language-bash}
+
+
+At the bottom of the help menu you will see a section with some optional arguments for the
+`conda` command. In particular you can pass the `--version` flag which will return the version
+number. Again output should look similar to the following.
+
+~~~
+$ conda --version
+conda 4.8.2
+~~~
+{: .language-bash}
 
 
 ## Required Python Packages
@@ -134,29 +132,15 @@ The following are packages needed for this workshop:
 * [Jupyter notebook](https://jupyter.org/)
 * [Numpy](https://numpy.org/)
 * [Matplotlib](https://matplotlib.org/)
-* [Plotnine](https://plotnine.readthedocs.io/en/stable/)
 
-All packages apart from `plotnine` will have automatically been installed with Anaconda
-and we can use Anaconda as a package manager to install the missing `plotnine` package:
-You need to open up a *Terminal*, if you are using Mac OSX, or Linux (see instructions above),
-or launch an *anaconda-promt*, if you are using Windows. In your terminal window type the following:
+To install these packages, in your terminal window type the following:
 
 ~~~
-conda install -y -c conda-forge plotnine
+conda install -y -c conda-forge pandas numpy matplotlib jupyter
 ~~~
 {: .language-bash}
 
 This will then install the latest version of plotnine into your conda environment.
-
-## Required packages: Miniconda
-
-Miniconda is a lightweight version of Anaconda. If you install Miniconda instead of Anaconda,
-you need to install required packages manually in the following way:
-~~~
-conda install -y numpy pandas matplotlib jupyter
-conda install -c conda-forge plotnine
-~~~
-{: .language-bash}
 
 ### _(Alternative)_ Installing required packages with environment file
 Download the 
@@ -196,3 +180,13 @@ wish to use a different browser, open this link: <http://localhost:8888>.
 
 For a brief introduction to Jupyter Notebooks, please consult our
 [Introduction to Jupyter Notebooks](.{% link _extras/jupyter_notebooks.md %}) page.
+
+
+
+> ## Data
+> We will be using some ocean wave data and some geospatial datasets for this lesson; please download:
+> - [data.zip]({{ page.root }}/data/data.zip)
+>
+> Please download and then unzip the file, and move the files to a directory called data within the 
+> directory you will run your Notebook from
+{: .prereq}
