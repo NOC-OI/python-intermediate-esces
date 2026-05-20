@@ -621,8 +621,8 @@ results.
 > Count the number of missing values per column.
 >
 > **Hint**
-> The method `.count()` gives you the number of non-NA observations per column.
-> Try looking to the `.isnull()` method.
+> The method `.count()` gives you the number of non-NA observations per column, you need the inverse of that.
+> Try looking at the `.isnull()` method.
 >
 >> ## Solution
 >> ~~~
@@ -639,7 +639,10 @@ results.
 >> ~~~
 >> {: .language-python}
 >>
->> It's also possible to use function chaining:
+>> Generally using a for loop is not the most "pythonic" way to do things and Pandas usually offers us
+>> alternate ways to do things that avoid using a loop. The for loop is usually the slowest way to iterate
+>> through a dataset, although with data this small the difference is negligible. We can chain the `isnull` 
+>> and `sum` functions and Pandas will sum across each column, giving us the answer. 
 >>
 >> ~~~
 >> waves_df.isnull().sum()
