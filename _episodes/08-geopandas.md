@@ -42,9 +42,7 @@ locations = buoys[["Name", "latitude", "longitude"]]
 ~~~
 {: .language-python}
 
-To be able to deal with geospatial data, we need a python package that doesn't come
-included with the Conda distribution we're using. We can install the additional packages
-we need directly within a Notebook:
+To be able to deal with geospatial data, we need to use the Geopandas library which we (should have) installed earlier. If you didn't install this then, it can be installed by running:
 
 ~~~
 conda install geopandas -c conda-forge

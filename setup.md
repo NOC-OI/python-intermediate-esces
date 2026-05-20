@@ -131,15 +131,17 @@ The following are packages needed for this workshop:
 * [Jupyter notebook](https://jupyter.org/)
 * [Numpy](https://numpy.org/)
 * [Matplotlib](https://matplotlib.org/)
+* [Geopandas](https://geopandas.org/)
+* [Cartopy](https://cartopy.readthedocs.io/stable/)
 
 To install these packages, in your terminal window type the following:
 
 ~~~
-conda install -y -c conda-forge pandas numpy matplotlib jupyter
+conda install -y -c conda-forge pandas numpy matplotlib jupyter cartopy geopandas
 ~~~
 {: .language-bash}
 
-This will then install the latest version of plotnine into your conda environment.
+This will then install the latest version of the packages into your Conda environment.
 
 ### _(Alternative)_ Installing required packages with environment file
 Download the 
