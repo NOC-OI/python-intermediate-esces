@@ -380,7 +380,7 @@ waves_df.loc[[0, 10, 35549], :]
 
 **NOTE 1**: with our dataset, we are using integers even when using `loc` because our DataFrame index
 (which is the unnamed first column) is composed of integers - but Pandas converts these to strings. If you had a column of
-strings that you wanted to index using labels, you need to convert that columun using the `set_index` function
+strings that you wanted to index using labels, you need to convert that column using the `set_index` function
 
 **NOTE 2**: Labels must be found in the DataFrame or you will get a `KeyError`.
 
