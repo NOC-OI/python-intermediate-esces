@@ -285,6 +285,9 @@ for i, depth in enumerate(buoys_df["Depth"]):
 
 
 joined = pd.merge(left=waves_df, right=buoys_df, left_on='buoy_id', right_on='buoy_id')
+
+# rotate the labels so they don't overlap
+plt.xticks(rotation = 90)
 plt.bar(joined["Name_x"].unique(), joined["Depth"].unique())
 ~~~
 {: .language-python}
