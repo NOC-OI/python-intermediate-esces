@@ -632,7 +632,7 @@ waves_df['Peak Direction'] * math.pi / 180
 
 > ## Challenge - maths & formatting
 >
-> Convert the temperature colum to Kelvin (adding 273.15 to every value), and round the answer to 1 decimal place
+> Convert the temperature column to Kelvin (adding 273.15 to every value), and round the answer to 1 decimal place
 >
 >> ## Solution
 >> ~~~
