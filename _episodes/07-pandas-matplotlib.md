@@ -210,7 +210,7 @@ ax2.hist(beta_draws)
 
 ![Plot with additional axes](../fig/08-dualdistribution.png)
 
-> ## Challenge - Drawing from distributions
+> ## Challenge - Drawing from distributions (optional)
 > Have a look at [`numpy.random` documentation](https://docs.scipy.org/doc/numpy/reference/random/index.html).
 > Choose a distribution you have no familiarity with, and try to sample from and visualize it.
 {: .challenge}
